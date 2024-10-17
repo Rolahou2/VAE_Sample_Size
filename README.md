@@ -8,8 +8,8 @@ Variational Autoencoders (VAEs) are powerful generative models that can encode h
 *Figure 1: Workflow of Training a Variational Autoencoder (VAE) on X-ray Images and Evaluating the Effect of Sample Size on Classification Performance for Original vs Reconstructed Images.*
 
 # Features
-- **Training a VAE on X-ray images.**
-- **Reconstruction of images using VAE.**
+- **Training a VAE on X-ray images using `kaggle datasets download -d sachinkumar413/covid-pneumonia-normal-chest-xray-images`.**
+- **Reconstruction of another testing images acquired from `kaggle datasets download -d qusaiabdo/xray-normal-covid19-pneumonia` using VAE model.**
 - **Comparison of classification performance on original vs. reconstructed images.**
 - **Exploration of sample size effects on classification accuracy.**
 
