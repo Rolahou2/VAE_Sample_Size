@@ -81,7 +81,7 @@ We evaluated the classification performance of a Random Forest model on both ori
 The figure below illustrates the learning curves and fitted power law models for Random Forest (RF) classification error rates on original X-ray images and VAE-reconstructed images, across different sample sizes.
 
 <div align="center">
-  <img src="results/SampleSizeDiscrepancy .PNG" alt="Figure 4: Learning Curves of RF Model on Original vs VAE-Reconstructed X-ray Images Across Sample Sizes" width="600">
+  <img src="results/SampleSizeDiscrepancy.PNG" alt="Figure 4: Learning Curves of RF Model on Original vs VAE-Reconstructed X-ray Images Across Sample Sizes" width="600">
   <p><em>Figure 4: The learning curves show the classification error rate as a function of sample size for both original X-ray images (left) and VAE-reconstructed images (right). The RF model trained on VAE-reconstructed images achieves a higher final performance (97.91%) compared to the model trained on original images (93.11%) at larger sample sizes. Both curves show improved performance with increasing data, but the VAE-reconstructed data displays a steeper error rate reduction at smaller sample sizes.</em></p>
 </div>
 
@@ -95,7 +95,7 @@ These results highlight that the VAE-reconstructed data can preserve sufficient 
 The figure below demonstrates that comparable classification performance can be achieved with less data when using VAE-reconstructed images. The table on the left shows the sample size percentages required for original images versus VAE-reconstructed images to achieve similar classification performance. The heatmap on the right further illustrates the p-values indicating the statistical significance of performance differences between models trained on original images and those trained on VAE-reconstructed images for varying sample sizes.
 
 <div align="center">
-  <img src="results/SampleSizeDiscrepancy .PNG" alt="Figure 5: Achieving Comparable Results with Less Data Using VAE-Reconstructed Images" width="600">
+  <img src="results/VAE_Less_Data_Similar_Results.PNG" alt="Figure 5: Achieving Comparable Results with Less Data Using VAE-Reconstructed Images" width="600">
   <p><em>Figure 5: The table (left) compares the percentage of sample size needed to achieve similar classification performance using original versus VAE-reconstructed images. The VAE-reconstructed images require less data to reach comparable accuracy levels. The heatmap (right) displays the p-values for performance differences between models trained on original images and VAE-reconstructed images across different sample sizes, showing that VAE-reconstructed data can perform similarly to original data with fewer samples.</em></p>
 </div>
 
