@@ -81,7 +81,7 @@ We evaluated the classification performance of a Random Forest model on both ori
 The figure below illustrates the learning curves and fitted power law models for Random Forest (RF) classification error rates on original X-ray images and VAE-reconstructed images, across different sample sizes.
 
 <div align="center">
-  <img src="results/SampleSizeDiscrepancy.PNG" alt="Figure 4: Learning Curves of RF Model on Original vs VAE-Reconstructed X-ray Images Across Sample Sizes" width="600">
+  <img src="results/SampleSizeDiscrepancy .PNG" alt="Figure 4: Learning Curves of RF Model on Original vs VAE-Reconstructed X-ray Images Across Sample Sizes" width="600">
   <p><em>Figure 4: The learning curves show the classification error rate as a function of sample size for both original X-ray images (left) and VAE-reconstructed images (right). The RF model trained on VAE-reconstructed images achieves a higher final performance (97.91%) compared to the model trained on original images (93.11%) at larger sample sizes. Both curves show improved performance with increasing data, but the VAE-reconstructed data displays a steeper error rate reduction at smaller sample sizes.</em></p>
 </div>
 
