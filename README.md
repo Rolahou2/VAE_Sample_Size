@@ -58,17 +58,17 @@ The VAE effectively reconstructs X-ray images from the latent space. Below is an
 *Figure 2: Original X-ray image (left) compared to VAE-reconstructed image (right).*
 
 ## 2. Classification Performance (Original vs VAE)
-We evaluated the classification performance of a Random Forest model on both original and VAE-reconstructed images, using different sample sizes. The results show a minimal drop in accuracy with VAE-reconstructed images, demonstrating the efficiency of the VAE in preserving critical information.
+We evaluated the classification performance of a Random Forest model on both original and VAE-reconstructed images, using different sample sizes. The results show a minimal change in accuracy when using VAE-reconstructed images compared to the original images. This demonstrates the VAE's efficiency in preserving critical information across different sample sizes.
 
-![Figure 3: Original vs VAE-Reconstructed X-ray Images](results/classifperformance.PNG)
-*Figure 3: Original X-ray image (left) compared to VAE-reconstructed image (right).*
+![Figure 3: Comparison of Classification Accuracy on Original vs VAE-Reconstructed Images Across Different Sample Size Ratios](results/classifperformance.PNG)
+*Figure 3: Boxplot showing the classification accuracy scores for Random Forest applied to original (w/o VAE) and VAE-reconstructed images across various sample size ratios. The 95% confidence intervals are shown in yellow, and the p-value indicates no significant difference between the two groups for the given sample sizes (p = 0.613).*
 
 Sample Size: 35%
-Original Accuracy: 89%
-VAE-Reconstructed Accuracy: 86%
+Original Accuracy: 78.82%
+VAE-Reconstructed Accuracy: 80.45%
 Sample Size: 50%
-Original Accuracy: 92%
-VAE-Reconstructed Accuracy: 90%
+Original Accuracy: 80.03%
+VAE-Reconstructed Accuracy: 80.87%
 
 ## 3. Effect of Sample Size on Classification
 Below is a plot showing the classification error rate as a function of sample size for both the original and VAE-reconstructed images.
