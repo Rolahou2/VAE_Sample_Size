@@ -14,7 +14,7 @@ def main():
     """
 
     # Load and preprocess data
-    zip_path = '/content/gdrive/MyDrive/Colab Notebooks/test.zip'
+    zip_path = '/path_to_testing_set.zip'
     classes = ['COVID19', 'NORMAL', 'PNEUMONIA']
     start_name = 'test'
     common_size = (64, 64)
@@ -27,7 +27,7 @@ def main():
     Xtest_norm = normalize_images(X_test)
 
     # Load model and reconstruct images
-    vaeModel = tf.keras.models.load_model('/content/gdrive/MyDrive/Colab Notebooks/vae_model')
+    vaeModel = tf.keras.models.load_model('/results/vae_model')
     Xtrain_vae = reconstruct_images(vaeModel, Xtrain_norm)
     Xtest_vae = reconstruct_images(vaeModel, Xtest_norm)
 
@@ -80,15 +80,15 @@ def main():
                (scores_list_vae, saliency_map_list_vae), (scores_list_vae_RF, feature_importances_list_vae)],
               ['CNN_scores_saliency', 'RF_scores_importances', 'CNN_VAE_scores_saliency', 'RF_VAE_scores_importances'])
     
-    _, _, _, predicted_value_CNN = fit_learning_curve(scores_list, ratio_s, [0.9], '/content/gdrive/MyDrive/Colab Notebooks/', 'CNN')
-    _, _, _, predicted_value_CNN_VAE = fit_learning_curve(scores_list_vae, ratio_s, [0.9], '/content/gdrive/MyDrive/Colab Notebooks/', 'CNN_VAE')
-    _, _, _, predicted_value_RF = fit_learning_curve(scores_list_RF, ratio_s, [0.9], '/content/gdrive/MyDrive/Colab Notebooks/', 'RF')
-    _, _, _, predicted_value_RF_VAE = fit_learning_curve(scores_list_vae_RF, ratio_s, [0.9], '/content/gdrive/MyDrive/Colab Notebooks/', 'RF_VAE')
+    _, _, _, predicted_value_CNN = fit_learning_curve(scores_list, ratio_s, [0.9], '/results/', 'CNN')
+    _, _, _, predicted_value_CNN_VAE = fit_learning_curve(scores_list_vae, ratio_s, [0.9], '/results/', 'CNN_VAE')
+    _, _, _, predicted_value_RF = fit_learning_curve(scores_list_RF, ratio_s, [0.9], '/results/', 'RF')
+    _, _, _, predicted_value_RF_VAE = fit_learning_curve(scores_list_vae_RF, ratio_s, [0.9], '/results/', 'RF_VAE')
     
     
     # Visualize
-    plt_bxplt(scores_list, scores_list_vae, ratio_s, save_path='/content/gdrive/MyDrive/Colab Notebooks/box_plot_both.png')
-    plt_bxplt(scores_list_RF, scores_list_vae_RF, ratio_s, save_path='/content/gdrive/MyDrive/Colab Notebooks/box_plot_both_RF.png')
+    plt_bxplt(scores_list, scores_list_vae, ratio_s, save_path='/results/box_plot_both.png')
+    plt_bxplt(scores_list_RF, scores_list_vae_RF, ratio_s, save_path='/results/box_plot_both_RF.png')
 
 if __name__ == "__main__":
     main()
