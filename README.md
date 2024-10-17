@@ -22,13 +22,28 @@ pip install -r requirements.txt
 ```
 Make sure you have the following dependencies:
 
-- *Python 3.7+*
-- *TensorFlow / PyTorch (for VAE)*
-- *Scikit-learn (for Random Forest classifier)*
-- *Matplotlib / Seaborn (for plotting)*
-- *Pandas, Numpy*
+- **Python 3.7+**
+- **TensorFlow / PyTorch (for VAE)**
+- **Scikit-learn (for Random Forest classifier)**
+- **Matplotlib / Seaborn (for plotting)**
+- **Pandas, Numpy**
 
 # Usage
+Before you can train the VAE, you need to download the X-ray dataset from Kaggle. Follow these steps:
+
+### Step 1: Download the Dataset from Kaggle
+1. Go to [Kaggle's X-ray training dataset page]([https://www.kaggle.com/](https://www.kaggle.com/datasets/sachinkumar413/covid-pneumonia-normal-chest-xray-images/data)) and [Kaggle's X-ray testing dataset page](https://www.kaggle.com/datasets/qusaiabdo/xray-normal-covid19-pneumonia).
+2. Download the datasets to your local machine.
+
+### Step 2: Unzip the Dataset
+Unzip the downloaded dataset and place it in an accessible directory on your machine (e.g., `path_to_dataset/`).
+
+### Step 3: Train the VAE Model
+Once the dataset is downloaded and unzipped, you can train the VAE model by running the following command:
+
+```bash
+python -m src.training.train_vae --epochs 50
+```
 To train the VAE on the X-ray dataset, run the following command:
 ```bash
 python train_vae.py --dataset xray_images --epochs 50
