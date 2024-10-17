@@ -13,8 +13,8 @@ Exploration of sample size effects on classification accuracy.
 # Installation
 To run this project, clone the repository and install the required packages:
 ```bash
-git clone https://github.com/username/vae-xray-reconstruction.git
-cd vae-xray-reconstruction
+git clone https://github.com/Rolahou2/VAE_Sample_Size.git
+cd VAE_Sample_Size
 pip install -r requirements.txt
 ```
 Make sure you have the following dependencies:
