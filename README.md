@@ -3,6 +3,8 @@ This project demonstrates the use of a Variational Autoencoder (VAE) to reconstr
 
 # Project Overview
 Variational Autoencoders (VAEs) are powerful generative models that can encode high-dimensional data into a lower-dimensional latent space. This project uses a VAE to compress and reconstruct X-ray images. We then evaluate how well a Random Forest classifier performs on both the original and VAE-reconstructed images with varying amounts of training data.
+![Figure 1: Project Workflow](path/to/image)
+*Figure 1: Project Workflow. Start by training VAE on X-ray Images.*
 
 # Features
 Training a VAE on X-ray images.
