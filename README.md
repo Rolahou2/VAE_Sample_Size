@@ -69,12 +69,13 @@ We evaluated the classification performance of a Random Forest model on both ori
   <p><em>Figure 3: Boxplot showing the classification accuracy scores for Random Forest applied to original (w/o VAE) and VAE-reconstructed images across various sample size ratios. The 95% confidence intervals are shown in yellow, and the p-value indicates no significant difference between the two groups for the given sample sizes (p = 0.613).</em></p>
 </div>
 
-Sample Size: 35%
-Original Accuracy: 78.82%
-VAE-Reconstructed Accuracy: 80.45%
-Sample Size: 50%
-Original Accuracy: 80.03%
-VAE-Reconstructed Accuracy: 80.87%
+### Quantitative Results
+- **Sample Size: 35%**
+  - Original Accuracy: 78.82%
+  - VAE-Reconstructed Accuracy: 80.45%
+- **Sample Size: 50%**
+  - Original Accuracy: **80.03%**
+  - VAE-Reconstructed Accuracy: **80.87%**
 
 ## 3. Effect of Sample Size on Classification
 Below is a plot showing the classification error rate as a function of sample size for both the original and VAE-reconstructed images.
