@@ -1,10 +1,10 @@
 from sklearn.model_selection import train_test_split
-from image_data_processing import read_zip
-from utilsVAE import bootstrap_sample_size_planning_sequential
+from utils.image_data_processing import read_zip
+from utils.utilsVAE import bootstrap_sample_size_planning_sequential
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras.utils import to_categorical
-from utilsVAE import plt_bxplt, normalize_images, reconstruct_images, save_scores, save_data, fit_learning_curve 
+from utils.utilsVAE import plt_bxplt, normalize_images, reconstruct_images, save_scores, save_data, fit_learning_curve 
 import time
 
 def main():
