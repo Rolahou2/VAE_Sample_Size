@@ -53,6 +53,7 @@ python vaeSS.py
 # Results
 ## 1. VAE Image Reconstruction
 The VAE effectively reconstructs X-ray images from the latent space. Below is an example comparing the original and reconstructed images.
+
 ![Figure 2: Original vs VAE-Reconstructed X-ray Images](results/originalvsreconstr.PNG)
 *Figure 2: Original X-ray image (left) compared to VAE-reconstructed image (right).*
 
