@@ -1,6 +1,6 @@
-from image_data_processing import load_and_preprocess_data, load_and_preprocess_data_augment, datasets_to_arrays
+from utils.image_data_processing import load_and_preprocess_data, load_and_preprocess_data_augment, datasets_to_arrays
 from training import train_vae, train_vae_augment
-from utilsVAE import plot_train_val_loss, visualize_evaluation_metrics
+from utils.utilsVAE import plot_train_val_loss, visualize_evaluation_metrics
 import numpy as np
 import tensorflow as tf
 import pickle
