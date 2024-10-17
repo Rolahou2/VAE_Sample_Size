@@ -22,11 +22,11 @@ pip install -r requirements.txt
 ```
 Make sure you have the following dependencies:
 
-**Python 3.7+**
-**TensorFlow / PyTorch (for VAE)**
-**Scikit-learn (for Random Forest classifier)**
-**Matplotlib / Seaborn (for plotting)**
-**Pandas, Numpy**
+*Python 3.7+*
+*TensorFlow / PyTorch (for VAE)*
+*Scikit-learn (for Random Forest classifier)*
+*Matplotlib / Seaborn (for plotting)*
+*Pandas, Numpy*
 
 # Usage
 To train the VAE on the X-ray dataset, run the following command:
