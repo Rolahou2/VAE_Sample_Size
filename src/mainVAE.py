@@ -73,7 +73,7 @@ def main():
     tf.random.set_seed(42)
 
     # Load and preprocess data
-    zip_path = '/content/gdrive/MyDrive/Colab Notebooks/Dataset.zip'
+    zip_path = '/path_to_training_dataset.zip'
     classes = ['COVID', 'NORMAL', 'PNEUMONIA']
     start_name = 'Dataset'
     common_size = (64, 64)
@@ -93,14 +93,14 @@ def main():
         mse_scores, mae_scores, ssim_scores, psnr_scores = predict_metrcis_save(vae, test_ds, augment = True)
     
     # Save History
-    with open('/content/gdrive/MyDrive/Colab Notebooks/history_vae', 'wb') as file_pi:
+    with open('/results/history_vae', 'wb') as file_pi:
               pickle.dump(history.history, file_pi)
     # Save the model
-    vae.save('/content/gdrive/MyDrive/Colab Notebooks/vae_model', save_format='tf')
+    vae.save('/results/vae_model', save_format='tf')
     
     # Save encoder, decoder
-    encoder.save('/content/gdrive/MyDrive/Colab Notebooks/encoder', save_format='tf')
-    decoder.save('/content/gdrive/MyDrive/Colab Notebooks/decoder', save_format='tf')
+    encoder.save('/results/encoder', save_format='tf')
+    decoder.save('/results/decoder', save_format='tf')
     
     visualize_evaluation_metrics(mse_scores, mae_scores, ssim_scores, psnr_scores, 'evaluation_visualization.png')
     plot_train_val_loss(history.history)
