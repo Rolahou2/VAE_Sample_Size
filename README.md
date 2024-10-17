@@ -18,10 +18,15 @@ cd VAE_Sample_Size
 pip install -r requirements.txt
 ```
 Make sure you have the following dependencies:
+
 Python 3.7+
+
 TensorFlow / PyTorch (for VAE)
+
 Scikit-learn (for Random Forest classifier)
+
 Matplotlib / Seaborn (for plotting)
+
 Pandas, Numpy
 
 # Usage
@@ -38,6 +43,7 @@ python evaluate_rf.py --original --vae_reconstructed --sample_size 0.3
 ## 1. VAE Image Reconstruction
 The VAE effectively reconstructs X-ray images from the latent space. Below is an example comparing the original and reconstructed images.
 ![Figure 1: Original vs VAE-Reconstructed X-ray Images](path/to/image)
+*Figure 1: Original X-ray image (left) compared to VAE-reconstructed image (right).*
 
 ## 2. Classification Performance (Original vs VAE)
 We evaluated the classification performance of a Random Forest model on both original and VAE-reconstructed images, using different sample sizes. The results show a minimal drop in accuracy with VAE-reconstructed images, demonstrating the efficiency of the VAE in preserving critical information.
