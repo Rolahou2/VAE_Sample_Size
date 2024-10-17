@@ -29,11 +29,11 @@ After training, you can use the pre-trained VAE model to reconstruct the images 
 'python evaluate_rf.py --original --vae_reconstructed --sample_size 0.3'
 
 # Results
-1. VAE Image Reconstruction
+## 1. VAE Image Reconstruction
 The VAE effectively reconstructs X-ray images from the latent space. Below is an example comparing the original and reconstructed images.
 Figure 1: Original vs VAE-Reconstructed X-ray Images
 
-2. Classification Performance (Original vs VAE)
+## 2. Classification Performance (Original vs VAE)
 We evaluated the classification performance of a Random Forest model on both original and VAE-reconstructed images, using different sample sizes. The results show a minimal drop in accuracy with VAE-reconstructed images, demonstrating the efficiency of the VAE in preserving critical information.
 
 Sample Size: 35%
@@ -43,7 +43,7 @@ Sample Size: 50%
 Original Accuracy: 92%
 VAE-Reconstructed Accuracy: 90%
 
-3. Effect of Sample Size on Classification
+## 3. Effect of Sample Size on Classification
 Below is a plot showing the classification error rate as a function of sample size for both the original and VAE-reconstructed images.
 
 Figure 2: Error Rate vs Sample Size for Original and VAE-Reconstructed Images
