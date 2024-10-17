@@ -42,7 +42,7 @@ Unzip the downloaded dataset and place it in an accessible directory on your mac
 Once the dataset is downloaded and unzipped and paths are updated, you can train the VAE model by running the following command:
 
 ```bash
-python -m src.mainVAE --epochs 200
+python -m src.mainVAE
 ```
 
 After training, you can use the pre-trained VAE model to reconstruct the testing images (after updating the paths in the code) and evaluate classification performance with Random Forest:
@@ -53,11 +53,14 @@ python vaeSS.py
 # Results
 ## 1. VAE Image Reconstruction
 The VAE effectively reconstructs X-ray images from the latent space. Below is an example comparing the original and reconstructed images.
-![Figure 1: Original vs VAE-Reconstructed X-ray Images](path/to/image)
-*Figure 1: Original X-ray image (left) compared to VAE-reconstructed image (right).*
+![Figure 2: Original vs VAE-Reconstructed X-ray Images](results/originalvsreconstr.PNG)
+*Figure 2: Original X-ray image (left) compared to VAE-reconstructed image (right).*
 
 ## 2. Classification Performance (Original vs VAE)
 We evaluated the classification performance of a Random Forest model on both original and VAE-reconstructed images, using different sample sizes. The results show a minimal drop in accuracy with VAE-reconstructed images, demonstrating the efficiency of the VAE in preserving critical information.
+
+![Figure 3: Original vs VAE-Reconstructed X-ray Images](results/classifperformance.PNG)
+*Figure 3: Original X-ray image (left) compared to VAE-reconstructed image (right).*
 
 Sample Size: 35%
 Original Accuracy: 89%
