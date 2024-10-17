@@ -82,13 +82,28 @@ The figure below illustrates the learning curves and fitted power law models for
 
 <div align="center">
   <img src="results/SampleSizeDiscrepancy .PNG" alt="Figure 4: Learning Curves of RF Model on Original vs VAE-Reconstructed X-ray Images Across Sample Sizes" width="600">
-  <p><em>Figure 4: The learning curves show the classification error rate as a function of sample size for both original X-ray images (left) and VAE-reconstructed images (right). The RF model trained on VAE-reconstructed images achieves a higher final performance (97.91%) compared to the model trained on original images (93.11%) at larger sample sizes. Both curves show improved performance with increasing data, but the VAE-reconstructed data displays a steeper error rate reduction at smaller sample sizes..</em></p>
+  <p><em>Figure 4: The learning curves show the classification error rate as a function of sample size for both original X-ray images (left) and VAE-reconstructed images (right). The RF model trained on VAE-reconstructed images achieves a higher final performance (97.91%) compared to the model trained on original images (93.11%) at larger sample sizes. Both curves show improved performance with increasing data, but the VAE-reconstructed data displays a steeper error rate reduction at smaller sample sizes.</em></p>
 </div>
 
 The plots show the classification error rate (y-axis) as a function of sample size (x-axis). Key observations:
 Original X-ray Images: The RF model trained on the original images achieves an error rate of 93.11% at larger sample sizes.
 VAE-Reconstructed X-ray Images: The RF model trained on VAE-reconstructed images achieves a higher performance, with an error rate of 97.91% at larger sample sizes.
 These results highlight that the VAE-reconstructed data can preserve sufficient information to improve performance slightly over the original data, especially at larger sample sizes. Both learning curves show a decreasing trend in error rates as the sample size increases, indicating improved model performance with more data. However, for smaller sample sizes, the VAE-reconstructed images show more significant differences, with a steeper decline in error rates compared to the original images.
+
+## Achieving Similar Results with Less Data via VAE
+
+The figure below demonstrates that comparable classification performance can be achieved with less data when using VAE-reconstructed images. The table on the left shows the sample size percentages required for original images versus VAE-reconstructed images to achieve similar classification performance. The heatmap on the right further illustrates the p-values indicating the statistical significance of performance differences between models trained on original images and those trained on VAE-reconstructed images for varying sample sizes.
+
+<div align="center">
+  <img src="results/SampleSizeDiscrepancy .PNG" alt="Figure 5: Achieving Comparable Results with Less Data Using VAE-Reconstructed Images" width="600">
+  <p><em>Figure 5: The table (left) compares the percentage of sample size needed to achieve similar classification performance using original versus VAE-reconstructed images. The VAE-reconstructed images require less data to reach comparable accuracy levels. The heatmap (right) displays the p-values for performance differences between models trained on original images and VAE-reconstructed images across different sample sizes, showing that VAE-reconstructed data can perform similarly to original data with fewer samples.</em></p>
+</div>
+
+### Key Insights:
+- **Original vs VAE Sample Sizes**: For smaller sample sizes, the VAE-reconstructed data requires less data to achieve similar performance compared to the original data. For example, with only 10% of VAE-reconstructed data, you can achieve similar performance as using 15% of the original data.
+- **P-Value Heatmap**: The heatmap on the right shows that for several sample size ratios, the difference in performance between original and VAE-reconstructed data is not statistically significant, as indicated by the dark areas in the heatmap (p-values > 0.05).
+
+*Comparable results can be achieved with less data if images are reconstructed via VAE.*
 
 # Conclusion
 This project demonstrates that VAEs can be used to reconstruct X-ray images with minimal loss in classification performance, even with smaller data sets. The results suggest that VAE reconstructions could be a valuable tool for data augmentation or reducing data requirements in image-based machine learning tasks.
