@@ -57,14 +57,16 @@ The VAE effectively reconstructs X-ray images from the latent space. Below is an
 ![Figure 2: Original vs VAE-Reconstructed X-ray Images](results/originalvsreconstr.PNG)
 *Figure 2: Original X-ray image (left) compared to VAE-reconstructed image (right).*
 
+<div align="center">
+  <img src="results/originalvsreconstr.PNG" alt="Figure 2: Original X-ray image (left) compared to VAE-reconstructed image (right)." width="600">
+  <p><em>Figure 2: Original X-ray image (left) compared to VAE-reconstructed image (right).</em></p>
+</div>
+
 ## 2. Classification Performance (Original vs VAE)
 We evaluated the classification performance of a Random Forest model on both original and VAE-reconstructed images, using different sample sizes. The results show a minimal change in accuracy when using VAE-reconstructed images compared to the original images. This demonstrates the VAE's efficiency in preserving critical information across different sample sizes.
 
-![Figure 3: Comparison of Classification Accuracy on Original vs VAE-Reconstructed Images Across Different Sample Size Ratios](results/classifperformance.PNG)
-*Figure 3: Boxplot showing the classification accuracy scores for Random Forest applied to original (w/o VAE) and VAE-reconstructed images across various sample size ratios. The 95% confidence intervals are shown in yellow, and the p-value indicates no significant difference between the two groups for the given sample sizes (p = 0.613).*
-
 <div align="center">
-  <img src="results/classifperformance.PNG" alt="Figure 3: Classification Accuracy" width="600">
+  <img src="results/classifperformance.PNG" alt="Figure 3: Comparison of Classification Accuracy on Original vs VAE-Reconstructed Images Across Different Sample Size Ratios" width="600">
   <p><em>Figure 3: Boxplot showing the classification accuracy scores for Random Forest applied to original (w/o VAE) and VAE-reconstructed images across various sample size ratios. The 95% confidence intervals are shown in yellow, and the p-value indicates no significant difference between the two groups for the given sample sizes (p = 0.613).</em></p>
 </div>
 
