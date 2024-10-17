@@ -7,6 +7,11 @@ Variational Autoencoders (VAEs) are powerful generative models that can encode h
 ![Figure 1: Project Workflow](results/Workflow.PNG)
 *Figure 1: Workflow of Training a Variational Autoencoder (VAE) on X-ray Images and Evaluating the Effect of Sample Size on Classification Performance for Original vs Reconstructed Images.*
 
+<div align="center">
+  <img src="results/Workflow.PNG" alt="Figure 1: Workflow of Training a Variational Autoencoder (VAE) on X-ray Images and Evaluating the Effect of Sample Size on Classification Performance for Original vs Reconstructed Images." width="600">
+  <p><em>Figure 1: Workflow of Training a Variational Autoencoder (VAE) on X-ray Images and Evaluating the Effect of Sample Size on Classification Performance for Original vs Reconstructed Images.</em></p>
+</div>
+
 # Features
 - **Training a VAE on X-ray images using `kaggle datasets download -d sachinkumar413/covid-pneumonia-normal-chest-xray-images`.**
 - **Reconstruction of another testing images acquired from `kaggle datasets download -d qusaiabdo/xray-normal-covid19-pneumonia` using VAE model.**
@@ -53,9 +58,6 @@ python vaeSS.py
 # Results
 ## 1. VAE Image Reconstruction
 The VAE effectively reconstructs X-ray images from the latent space. Below is an example comparing the original and reconstructed images.
-
-![Figure 2: Original vs VAE-Reconstructed X-ray Images](results/originalvsreconstr.PNG)
-*Figure 2: Original X-ray image (left) compared to VAE-reconstructed image (right).*
 
 <div align="center">
   <img src="results/originalvsreconstr.PNG" alt="Figure 2: Original X-ray image (left) compared to VAE-reconstructed image (right)." width="600">
