@@ -39,18 +39,15 @@ Before you can train the VAE, you need to download the X-ray dataset from Kaggle
 Unzip the downloaded dataset and place it in an accessible directory on your machine (e.g., `path_to_dataset/`).
 
 ### Step 3: Train the VAE Model
-Once the dataset is downloaded and unzipped, you can train the VAE model by running the following command:
+Once the dataset is downloaded and unzipped and paths are updated, you can train the VAE model by running the following command:
 
 ```bash
-python -m src.training.train_vae --epochs 50
+python -m src.mainVAE --epochs 200
 ```
-To train the VAE on the X-ray dataset, run the following command:
+
+After training, you can use the pre-trained VAE model to reconstruct the testing images (after updating the paths in the code) and evaluate classification performance with Random Forest:
 ```bash
-python train_vae.py --dataset xray_images --epochs 50
-```
-After training, you can use the pre-trained VAE model to reconstruct the images and evaluate classification performance with Random Forest:
-```bash
-python evaluate_rf.py --original --vae_reconstructed --sample_size 0.3
+python vaeSS.py
 ```
 
 # Results
