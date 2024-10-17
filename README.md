@@ -32,7 +32,7 @@ Make sure you have the following dependencies:
 Before you can train the VAE, you need to download the X-ray dataset from Kaggle. Follow these steps:
 
 ### Step 1: Download the Dataset from Kaggle
-1. Go to [Kaggle's X-ray training dataset page]([https://www.kaggle.com/](https://www.kaggle.com/datasets/sachinkumar413/covid-pneumonia-normal-chest-xray-images/data)) and [Kaggle's X-ray testing dataset page](https://www.kaggle.com/datasets/qusaiabdo/xray-normal-covid19-pneumonia).
+1. Go to [Kaggle's X-ray training dataset page](https://www.kaggle.com/datasets/sachinkumar413/covid-pneumonia-normal-chest-xray-images/data) and [Kaggle's X-ray testing dataset page](https://www.kaggle.com/datasets/qusaiabdo/xray-normal-covid19-pneumonia).
 2. Download the datasets to your local machine.
 
 ### Step 2: Unzip the Dataset
