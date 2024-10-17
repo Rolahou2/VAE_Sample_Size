@@ -12,9 +12,11 @@ Exploration of sample size effects on classification accuracy.
 
 # Installation
 To run this project, clone the repository and install the required packages:
-'git clone https://github.com/username/vae-xray-reconstruction.git
+```bash
+git clone https://github.com/username/vae-xray-reconstruction.git
 cd vae-xray-reconstruction
-pip install -r requirements.txt'
+pip install -r requirements.txt
+```
 Make sure you have the following dependencies:
 Python 3.7+
 TensorFlow / PyTorch (for VAE)
@@ -24,14 +26,18 @@ Pandas, Numpy
 
 # Usage
 To train the VAE on the X-ray dataset, run the following command:
-'python train_vae.py --dataset xray_images --epochs 50'
+```bash
+python train_vae.py --dataset xray_images --epochs 50
+```
 After training, you can use the pre-trained VAE model to reconstruct the images and evaluate classification performance with Random Forest:
-'python evaluate_rf.py --original --vae_reconstructed --sample_size 0.3'
+```bash
+python evaluate_rf.py --original --vae_reconstructed --sample_size 0.3
+```
 
 # Results
 ## 1. VAE Image Reconstruction
 The VAE effectively reconstructs X-ray images from the latent space. Below is an example comparing the original and reconstructed images.
-Figure 1: Original vs VAE-Reconstructed X-ray Images
+![Figure 1: Original vs VAE-Reconstructed X-ray Images](path/to/image)
 
 ## 2. Classification Performance (Original vs VAE)
 We evaluated the classification performance of a Random Forest model on both original and VAE-reconstructed images, using different sample sizes. The results show a minimal drop in accuracy with VAE-reconstructed images, demonstrating the efficiency of the VAE in preserving critical information.
@@ -46,7 +52,7 @@ VAE-Reconstructed Accuracy: 90%
 ## 3. Effect of Sample Size on Classification
 Below is a plot showing the classification error rate as a function of sample size for both the original and VAE-reconstructed images.
 
-Figure 2: Error Rate vs Sample Size for Original and VAE-Reconstructed Images
+![Figure 2: Error Rate vs Sample Size for Original and VAE-Reconstructed Images](path/to/image)
 
 The graph shows that with larger sample sizes, the performance on both original and reconstructed images converges, while smaller sample sizes reveal more significant differences.
 
