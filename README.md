@@ -8,10 +8,10 @@ Variational Autoencoders (VAEs) are powerful generative models that can encode h
 *Figure 1: Project Workflow. Start by training VAE on X-ray Images.*
 
 # Features
-Training a VAE on X-ray images.
-Reconstruction of images using VAE.
-Comparison of classification performance on original vs. reconstructed images.
-Exploration of sample size effects on classification accuracy.
+- **Training a VAE on X-ray images.**
+- **Reconstruction of images using VAE.**
+- **Comparison of classification performance on original vs. reconstructed images.**
+- **Exploration of sample size effects on classification accuracy.**
 
 # Installation
 To run this project, clone the repository and install the required packages:
@@ -22,15 +22,11 @@ pip install -r requirements.txt
 ```
 Make sure you have the following dependencies:
 
-Python 3.7+
-
-TensorFlow / PyTorch (for VAE)
-
-Scikit-learn (for Random Forest classifier)
-
-Matplotlib / Seaborn (for plotting)
-
-Pandas, Numpy
+**Python 3.7+**
+**TensorFlow / PyTorch (for VAE)**
+**Scikit-learn (for Random Forest classifier)**
+**Matplotlib / Seaborn (for plotting)**
+**Pandas, Numpy**
 
 # Usage
 To train the VAE on the X-ray dataset, run the following command:
