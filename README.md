@@ -86,9 +86,9 @@ The figure below illustrates the learning curves and fitted power law models for
 </div>
 
 The plots show the classification error rate (y-axis) as a function of sample size (x-axis). Key observations:
-Original X-ray Images: The RF model trained on the original images achieves an error rate of 93.11% at larger sample sizes.
-VAE-Reconstructed X-ray Images: The RF model trained on VAE-reconstructed images achieves a higher performance, with an error rate of 97.91% at larger sample sizes.
-These results highlight that the VAE-reconstructed data can preserve sufficient information to improve performance slightly over the original data, especially at larger sample sizes. Both learning curves show a decreasing trend in error rates as the sample size increases, indicating improved model performance with more data. However, for smaller sample sizes, the VAE-reconstructed images show more significant differences, with a steeper decline in error rates compared to the original images.
+Original X-ray Images: The RF model trained on the original images achieves a maximum accuracy of 93.11% at larger sample sizes.
+VAE-Reconstructed X-ray Images: The RF model trained on VAE-reconstructed images achieves a higher maximum accuracy of 97.91% at larger sample sizes.
+These results demonstrate that the VAE-reconstructed data preserves enough information to achieve slightly higher accuracy than the original data, especially as the sample size increases. Both learning curves indicate that increasing the sample size leads to improved model performance, but for smaller sample sizes, the performance difference between the original and VAE-reconstructed images is more pronounced, with the VAE-reconstructed data yielding a faster improvement in performance.
 
 ## Achieving Similar Results with Less Data via VAE
 
